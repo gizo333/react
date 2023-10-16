@@ -1,0 +1,14 @@
+@mixin default-container {
+    padding-top: 15px;
+    display: flex;
+    position: relative;
+    background-color: rgb(28, 46, 51);
+}
+
+
+@mixin default-content{
+    background-color: rgb(238, 245, 246);
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 20px;
+}

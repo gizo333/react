@@ -1,0 +1,97 @@
+.head{
+    display: flex;
+    height: 30px;
+    margin: 15px;
+    justify-content: flex-end;
+}
+
+.logo{
+    height: auto;
+    width: 30px;
+    cursor: pointer;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    
+}
+
+.alarm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.setting{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin-left: 20px;
+    position: relative;
+}
+
+.register{
+    height: 40px;
+    width: 100px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20%;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.enter-link{
+    text-decoration: none;  /* Убирает подчеркивание */
+    color: inherit;         /* Унаследует цвет текста от родительского элемента */
+    outline: none;          /* Убирает контур фокуса */
+}
+
+
+.menu {
+    width: 200px; /* Фиксированная ширина меню */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    white-space: nowrap;
+    left: auto;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Если меню выходит за пределы экрана, переключаем его влево */
+  @media screen and (max-width: 370px) {
+    .setting:hover .menu {
+      left: auto;
+      right: 100%;
+    }
+  }
+  

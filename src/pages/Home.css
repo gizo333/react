@@ -1,0 +1,52 @@
+
+
+.HomeHeader{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(186, 186, 186);
+}
+
+.welcomeHead {
+    text-align: center; /* Добавляем эту строку для центрирования текста */
+    color: white; /* Пример: изменяем цвет текста на белый */
+  }
+
+  .logoContainer{
+   padding-right: 60px;
+    display: flex;
+    align-items: center;
+ 
+  }
+  
+.HomeLogo{
+    width: 35vw; /* Устанавливаем ширину в 50% от ширины видимой области */
+    height: auto; /* Позволяет логотипу сохранять пропорции при изменении ширины */
+    max-width: 100%;/* Ограничиваем максимальную ширину на случай, если экран очень узкий */
+  }
+  .HomeDjango{
+    width: 17vw; /* Устанавливаем ширину в 50% от ширины видимой области */
+    height: auto; /* Позволяет логотипу сохранять пропорции при изменении ширины */
+    max-width: 100%;/* Ограничиваем максимальную ширину на случай, если экран очень узкий */
+
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .HomeLogo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
