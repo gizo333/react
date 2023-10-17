@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Information from "../components/inform_user";
 import Sidebar from "../components/sidebar";
@@ -7,6 +7,7 @@ import "./style/EnterPage.css"
 
 
 const EnterPage = () => {
+    const [message, setMessage] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -27,16 +28,17 @@ const EnterPage = () => {
             if (response.ok) {
                 // Сохраняем токен или другие данные в localStorage или в состояние
                 localStorage.setItem('token', data.token);
-                // TODO: Перенаправить пользователя на главную страницу или другую страницу
+                window.location.replace("/about");
+            } else if (response.status === 421) {
+                setMessage('Неверный пароль!');
             } else {
-                // Показать сообщение об ошибке
                 console.error(data.message || "Ошибка при входе");
             }
         } catch (error) {
             console.error("Ошибка при выполнении запроса:", error);
         }
 
-        window.location.replace("/about");
+        
     }
 
 
@@ -59,8 +61,9 @@ const EnterPage = () => {
         </div>
 
             <form className="enterForm" onSubmit={handleSubmit}>
-
+            {message && <p>{message}</p>} 
                 <div className="formGroup">
+                   
                 <label htmlFor="email"></label>
                 <input className="reg-input" type="email" id="email"   placeholder="Введите ваш email" required autoComplete="email"  />
                 </div>
@@ -70,13 +73,12 @@ const EnterPage = () => {
                 <input className="reg-input" type="password" id="password"  placeholder="Введите ваш пароль" required autoComplete="new-password" />
             </div>
 
-            {/* <div className="formGroup">
-                <label htmlFor="confirmPassword"></label>
-                <input className="reg-input" type="password" id="confirmPassword" placeholder="Подтвердите ваш пароль" required autoComplete="new-password" />
-            </div> */}
+            
             <button className="button-style" type="submit">Войти</button>
+            
+            <Link to= "/reset">
             <button className="button-style" type="submit">Забыли пароль?</button>
-
+            </Link>
             </form>
             </div>
         </div>

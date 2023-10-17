@@ -11,6 +11,8 @@ import {
 
 
 
+
+
 const Register = () => {
     const [fullname, setFullName] = useState("");
     const [email, setEmail] = useState("");
@@ -143,9 +145,9 @@ const Register = () => {
 
             <button className="button-style" type="submit">Зарегистрироваться</button>
 
-            <button  type="button" onClick={handleCheckToken}>
+            {/* <button  type="button" onClick={resetPasswordSubmit}>
             Проверить токен
-          </button>
+          </button> */}
 
           
         </form>
