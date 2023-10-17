@@ -4,8 +4,6 @@ import { handleCheckToken } from '../components/check_jwt';
 const ProtectedRoute = ({ children }) => {
     const isTokenValid = handleCheckToken();
   
-    // Выполнить какие-либо действия в зависимости от наличия/отсутствия токена.
-    // Например, показать/скрыть UI-элементы, вывести уведомление и т.д.
     if(isTokenValid) {
       console.log("Token is valid");
       // Other actions...
