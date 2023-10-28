@@ -26,7 +26,7 @@ const EnterPage = () => {
 
             const data = await response.json();
             if (response.ok) {
-                // Сохраняем токен или другие данные в localStorage или в состояние
+                // Сохраняем токен или другие данные в localStorage
                 localStorage.setItem('token', data.token);
                 window.location.replace("/about");
             } else if (response.status === 421) {
