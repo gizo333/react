@@ -6,10 +6,8 @@ const ProtectedRoute = ({ children }) => {
   
     if(isTokenValid) {
       console.log("Token is valid");
-      // Other actions...
     } else {
       console.log("Token is invalid or does not exist");
-      // Other actions...
     }
   
     // Всегда возвращаем children, чтобы пользователь мог перейти на любую страницу.
